@@ -1,0 +1,23 @@
+﻿@page "/Compas"
+
+@inherits CompasBase
+
+<b>Name:</b>@Name
+
+<div>
+    <b>Buyur</b>@(Gender=="Male"?$"Mr. {Name} ":$"Miss .{Name}")
+</div>
+
+@*<div>
+        <b>Name :</b> <input value="@Name" @onchange="@(e=> { e.Value.ToString(); })" />
+
+    </div>*@
+@*<div>
+    <input @bind="Name" />
+</div>*@
+<div>
+    <textarea @bind="Description" @bind:event="oninput" />
+</div>
+<div>
+    Count:@Description.Length
+</div>
